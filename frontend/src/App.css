@@ -1,0 +1,259 @@
+/* Global Styles */
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #2af598, #009efd);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Form Section */
+.form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, select {
+    width: auto;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Telemetry Card */
+.telemetry-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    animation: fade-in 0.8s ease-in-out;
+}
+
+.telemetry-details {
+    margin-bottom: 20px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.comparison-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Track Section */
+.track-container {
+    margin-top: 20px;
+    animation: slide-in 0.8s ease-in-out;
+}
+
+.track-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.track-facts-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.fun-facts {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+.fun-facts h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.fun-facts ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.fun-facts li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Graph Section */
+.graph-container {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fade-in 0.8s ease-in-out;
+    cursor: grab; /* Add this for better UX when panning */
+}
+.graph-container:active {
+    cursor: grabbing;
+}
+
+.graph-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* AI Analysis Section */
+.ai-analysis-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    animation: fade-in 0.8s ease-in-out;
+}
+
+.ai-analysis-container h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.analyze-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.analyze-button:hover {
+    background-color: #0056b3;
+}
+
+.analysis-output {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.analysis-title {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.analysis-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.analysis-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.analysis-bullet {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
